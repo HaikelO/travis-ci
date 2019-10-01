@@ -4,8 +4,7 @@ branches:
 env:
   global:
     - ANDROID_PACKAGE_JS='travis-ci.apk'
-    - ANDROID_PACKAGE_FOLDER_JS=$TRAVIS_BUILD_DIR/demo/outputs
-    - ANDROID_PACKAGE_FOLDER_NG=$TRAVIS_BUILD_DIR/demo-angular/outputs
+    - ANDROID_PACKAGE_FOLDER=$TRAVIS_BUILD_DIR/platforms/android/app/build/outputs/apk/debug/
     - ANDROID_SAUCE_STORAGE="https://saucelabs.com/rest/v1/storage/$SAUCE_USER"
     - IOS_PACKAGE_JS='travis-ci.zip'
     - IOS_APP_NAME='travis-ci.app'
@@ -17,12 +16,12 @@ branches:
     - master
 matrix:
   include:
-    - stage: "Lint"
-      language: node_js
-      os: linux
-      node_js: "10"
-      install: true
-      script: npm i && npm run tslint
+    #- stage: "Lint"
+    #  language: node_js
+    # os: linux
+    # node_js: "10"
+    # install: true
+    #  script: npm i && npm run tslint
     - stage: "Build"
       os: osx
       env: 
