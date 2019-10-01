@@ -81,6 +81,6 @@ cache:
 
 install:
     - pip install six
-    - echo no | npm install -g nativescript@latest --ignore-scripts
+    - echo no | npm install -g nativescript@~5.4.2 --ignore-scripts
     - tns usage-reporting disable
     - tns error-reporting disable
